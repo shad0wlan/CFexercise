@@ -1,0 +1,6 @@
+@Plastiki_HostAddress = http://localhost:5213
+
+GET {{Plastiki_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

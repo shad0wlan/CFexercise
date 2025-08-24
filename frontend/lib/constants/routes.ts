@@ -1,0 +1,16 @@
+export const routes = {
+  home: "/",
+  login: "/login",
+  users: "/users",
+  entries: "/entries",
+  addUser: "/add-user",
+  editUser: "/edit-user",
+  machines: "/machines",
+  addMachine: "/machines/add-machine",
+  productCodes: "/product-codes",
+  addProductCode: "/product-codes/add-product-code",
+  addEntry: "/add-entry",
+  editEntry: "/edit-entry",
+  basicInfo: "/basic-info",
+  profile: "/profile",
+};

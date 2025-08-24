@@ -1,0 +1,36 @@
+﻿version: '3.8'
+services:
+  plastiki:
+    image: ghcr.io/glomvardos/plastiki-backend:latest
+    restart: always
+    build:
+      context: .
+      dockerfile: Plastiki/Dockerfile
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+      - HOST=db
+      - PORT=5432
+      - DATABASE=plastiki-db
+      - USERNAME=postgres
+      - PASSWORD=WDipCMvTZ46zE575DApj7IEqQuATFymkqz/c5l6RTGM=
+      - UPLOAD_PATH=/app/Uploads
+    ports:
+      - "8080:8080"
+      - "8081:8081"
+    depends_on:
+      - db
+    volumes:
+      - uploads-data:/app/Uploads
+  db:
+    image: postgres:latest
+    restart: always
+    environment:
+      POSTGRES_DB: plastiki-db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: WDipCMvTZ46zE575DApj7IEqQuATFymkqz/c5l6RTGM=
+    volumes:
+      - db-data:/var/lib/postgresql/data
+volumes:
+  db-data:
+  uploads-data:
+

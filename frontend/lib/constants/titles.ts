@@ -1,0 +1,16 @@
+export const titles = {
+  users: "ΣΤΟΙΧΕΙΑ ΧΡΗΣΤΩΝ",
+  addUser: "ΔΗΜΙΟΥΡΓΙΑ ΧΡΗΣΤΗ",
+  editUser: "ΕΠΕΞΕΡΓΑΣΙΑ ΧΡΗΣΤΗ",
+  entries: "ΚΑΤΑΧΩΡΗΣΕΙΣ",
+  addEntry: "ΝΕΑ ΚΑΤΑΧΩΡΗΣΗ",
+  editEntry: "ΕΠΕΞΕΡΓΑΣΙΑ ΚΑΤΑΧΩΡΗΣΗΣ",
+  machines: "ΣΤΟΙΧΕΙΑ ΜΗΧΑΝΩΝ",
+  addMachine: "ΔΗΜΙΟΥΡΓΙΑ ΜΗΧΑΝΗΣ",
+  editMachine: "ΕΠΕΞΕΡΓΑΣΙΑ ΜΗΧΑΝΗΣ",
+  productCodes: "ΚΩΔΙΚΟΙ ΠΡΟΙΟΝΤΩΝ",
+  addProductCode: "ΠΡΟΣΘΗΚΗ ΚΩΔΙΚΟΥ ΠΡΟΙΟΝΤΟΣ",
+  editProductCode: "ΕΠΕΞΕΡΓΑΣΙΑ ΚΩΔΙΚΟΥ ΠΡΟΙΟΝΤΟΣ",
+  userProfile: "ΠΡΟΦΙΛ ΧΡΗΣΤΗ",
+  basicInfo: "ΒΑΣΙΚΕΣ ΕΠΙΛΟΓΕΣ",
+};
