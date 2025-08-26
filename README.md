@@ -33,7 +33,7 @@ node setup.js
    ```bash
    dotnet run
    ```
-   Θα τρέχει στο http://localhost:5213 ή στο διαθέσιμο port που θα βρει.
+   Θα τρέχει στο http://localhost:5213 
    
    **Παράδειγμα output:**
    ```
