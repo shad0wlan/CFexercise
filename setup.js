@@ -37,10 +37,15 @@ function run(cmd, dir = '.') {
 log('checking tools...');
 const hasNode = checkCommand('node --version', 'Node.js');
 const hasDotnet = checkCommand('dotnet --version', '.NET SDK');
+const hasDocker = checkCommand('docker --version', 'Docker');
 
 if (!hasNode || !hasDotnet) {
   log('install missing tools first', 'error');
   process.exit(1);
+}
+
+if (!hasDocker) {
+  log('Docker not found - you will need to install PostgreSQL manually', 'error');
 }
 
 // backend setup
@@ -65,6 +70,23 @@ NEXT_PUBLIC_API_URL=http://localhost:5213/api`;
 }
 
 log('\nsetup done', 'success');
-log('\nto run:');
-log('backend: cd backend/api-backend && dotnet run');
-log('frontend: cd frontend && npm run dev');
+log('\nnext steps:');
+if (hasDocker) {
+  log('1. start database:');
+  log('   cd backend/api-backend');
+  log('   docker-compose -f docker-compose.dev.yml up -d');
+  log('2. run migrations:');
+  log('   dotnet ef database update');
+  log('3. start backend:');
+  log('   dotnet run');
+} else {
+  log('1. install PostgreSQL and create database "prodtrack"');
+  log('2. run migrations:');
+  log('   cd backend/api-backend');
+  log('   dotnet ef database update');
+  log('3. start backend:');
+  log('   dotnet run');
+}
+log('4. start frontend (new terminal):');
+log('   cd frontend');
+log('   npm run dev');
