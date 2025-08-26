@@ -73,7 +73,7 @@ NEXT_PUBLIC_IMAGE_URL=http://localhost:5213`;
 log('\nsetup done', 'success');
 log('\nnext steps:');
 if (hasDocker) {
-  log('1. start database (Docker must be running - Desktop on Win/Mac):');
+  log('1. start database (Docker must be running and db port 5432 must not be in use(or change it from docker dev compose file and appsettings.development in backend folder) - Desktop on Win/Mac):');
   log('   cd backend/prodtrack-backend');
   log('   docker-compose -f docker-compose.dev.yml up -d');
   log('2. run migrations:');
