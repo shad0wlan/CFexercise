@@ -119,6 +119,16 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+// Create Uploads folder if it doesn't exist (for dev environment)
+if (app.Environment.IsDevelopment())
+{
+    var uploadsPath = Path.Combine(builder.Environment.ContentRootPath, "Uploads");
+    if (!Directory.Exists(uploadsPath))
+    {
+        Directory.CreateDirectory(uploadsPath);
+    }
+}
+
 app.UseStaticFiles(new StaticFileOptions
 {
     FileProvider = new PhysicalFileProvider(
