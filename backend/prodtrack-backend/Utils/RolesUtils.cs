@@ -45,4 +45,44 @@ public static class RolesUtils
             }
         }
     }
+
+    public static async Task SeedDefaultUsersAsync(IServiceProvider services) {
+        var userManager = services.GetRequiredService<UserManager<User>>();
+        
+        var operatorUser = await userManager.FindByNameAsync("operator");
+        if (operatorUser == null)
+        {
+            operatorUser = new User
+            {
+                UserName = "operator",
+                Email = "operator@prodtrack.com",
+                FirstName = "ProdTrack",
+                LastName = "Operator",
+            };
+
+            var result = await userManager.CreateAsync(operatorUser, "Operator2025");
+            if (result.Succeeded)
+            {
+                await userManager.AddToRoleAsync(operatorUser, "Operator");
+            }
+        }
+
+        var workerUser = await userManager.FindByNameAsync("worker");
+        if (workerUser == null)
+        {
+            workerUser = new User
+            {
+                UserName = "worker",
+                Email = "worker@prodtrack.com",
+                FirstName = "ProdTrack",
+                LastName = "Worker",
+            };
+
+            var result = await userManager.CreateAsync(workerUser, "Worker2025");
+            if (result.Succeeded)
+            {
+                await userManager.AddToRoleAsync(workerUser, "Worker");
+            }
+        }
+    }
 }

@@ -32,6 +32,7 @@ export default function EntryFormTempInputs({
             <FormGroup>
               <Label>Κανονιού</Label>
               <Input
+                placeholder="180"
                 hasError={errors?.cannonTemp}
                 {...register("cannonTemp")}
                 disabled={isCompleted}
@@ -43,7 +44,7 @@ export default function EntryFormTempInputs({
             <FormGroup>
               <Label>Ζώνη 1</Label>
               <Input
-                placeholder="1"
+                placeholder="160"
                 hasError={errors?.screwsPerZone?.["1"]}
                 {...register("screwsPerZone.1")}
                 disabled={isCompleted}
@@ -56,7 +57,7 @@ export default function EntryFormTempInputs({
               <Label>Ζώνη 2</Label>
 
               <Input
-                placeholder="2"
+                placeholder="170"
                 hasError={errors?.screwsPerZone?.["2"]}
                 {...register("screwsPerZone.2")}
                 disabled={isCompleted}
@@ -69,7 +70,7 @@ export default function EntryFormTempInputs({
               <Label>Ζώνη 3</Label>
 
               <Input
-                placeholder="3"
+                placeholder="175"
                 hasError={errors?.screwsPerZone?.["3"]}
                 {...register("screwsPerZone.3")}
                 disabled={isCompleted}
@@ -82,7 +83,7 @@ export default function EntryFormTempInputs({
               <Label>Ζώνη 4</Label>
 
               <Input
-                placeholder="4"
+                placeholder="180"
                 hasError={errors?.screwsPerZone?.["4"]}
                 {...register("screwsPerZone.4")}
                 disabled={isCompleted}
@@ -95,7 +96,7 @@ export default function EntryFormTempInputs({
               <Label>Ζώνη 5</Label>
 
               <Input
-                placeholder="5"
+                placeholder="185"
                 hasError={errors?.screwsPerZone?.["5"]}
                 {...register("screwsPerZone.5")}
                 disabled={isCompleted}
@@ -108,7 +109,7 @@ export default function EntryFormTempInputs({
               <Label>Ζώνη 6</Label>
 
               <Input
-                placeholder="6"
+                placeholder="190"
                 hasError={errors?.screwsPerZone?.["6"]}
                 {...register("screwsPerZone.6")}
                 disabled={isCompleted}
@@ -126,7 +127,7 @@ export default function EntryFormTempInputs({
               <Label>Πάνω</Label>
 
               <Input
-                placeholder="Πάνω"
+                placeholder="80"
                 hasError={errors?.kalupiTemp?.up}
                 {...register("kalupiTemp.up")}
                 disabled={isCompleted}
@@ -139,7 +140,7 @@ export default function EntryFormTempInputs({
               <Label>Κάτω</Label>
 
               <Input
-                placeholder="Κάτω"
+                placeholder="85"
                 hasError={errors?.kalupiTemp?.down}
                 {...register("kalupiTemp.down")}
                 disabled={isCompleted}
@@ -152,7 +153,7 @@ export default function EntryFormTempInputs({
               <Label>Δεξιά</Label>
 
               <Input
-                placeholder="Δεξιά"
+                placeholder="75"
                 hasError={errors?.kalupiTemp?.right}
                 {...register("kalupiTemp.right")}
                 disabled={isCompleted}
@@ -165,7 +166,7 @@ export default function EntryFormTempInputs({
               <Label>Αριστερά</Label>
 
               <Input
-                placeholder="Αριστερά"
+                placeholder="75"
                 hasError={errors?.kalupiTemp?.left}
                 {...register("kalupiTemp.left")}
                 disabled={isCompleted}
@@ -178,7 +179,7 @@ export default function EntryFormTempInputs({
               <Label>Μπρ. Πάνω</Label>
 
               <Input
-                placeholder="Μπρ. Πάνω"
+                placeholder="90"
                 hasError={errors?.kalupiTemp?.frontUp}
                 {...register("kalupiTemp.frontUp")}
                 disabled={isCompleted}
@@ -191,7 +192,7 @@ export default function EntryFormTempInputs({
               <Label>Μπρ. Κάτω</Label>
 
               <Input
-                placeholder="Μπρ. Κάτω"
+                placeholder="95"
                 hasError={errors?.kalupiTemp?.frontDown}
                 {...register("kalupiTemp.frontDown")}
                 disabled={isCompleted}
@@ -206,7 +207,7 @@ export default function EntryFormTempInputs({
           <FormGroup className="lg:w-1/2">
             <Label>Τραβηχτικό</Label>
             <Input
-              placeholder="Ταχύτητα"
+              placeholder="25"
               hasError={errors?.speed}
               {...register("speed")}
               disabled={isCompleted}

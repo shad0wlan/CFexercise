@@ -68,15 +68,21 @@ export default function EntriesTable({ entries = [], isWorker }: Props) {
       },
       {
         id: "actions",
-        cell: ({ row }) => (
-          <TableActions
-            onEdit={`${routes.editEntry}/${row.original.id}`}
-            onDelete={() => deleteEntryAction(row.original.id)}
-          />
-        ),
+        cell: ({ row }) => {
+          const entry = row.original;
+          const isDisabled = isWorker && (entry.status === "Production" || entry.status === "Completed");
+          return (
+            <TableActions
+              onEdit={`${routes.editEntry}/${entry.id}`}
+              onDelete={() => deleteEntryAction(entry.id)}
+              disableEdit={isDisabled}
+              disableDelete={isDisabled}
+            />
+          );
+        },
       },
     ],
-    [],
+    [isWorker],
   );
 
   return (

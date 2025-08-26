@@ -2,8 +2,11 @@
 
 ## Τεχνολογίες
 
-Next.js 14 με TypeScript, Tailwind CSS, React Hook Form, Zod validation. 
-Default login: `admin` / `ProdTrack2025` (Auto-seeded)
+Next.js 14 με TypeScript, Tailwind CSS, React Hook Form, Zod validation.
+Default logins (Auto-seeded):
+- Admin: `admin` / `ProdTrack2025`
+- Operator: `operator` / `Operator2025`
+- Worker: `worker` / `Worker2025`
 ## Δομή
 
 ### App Router (`/app`)

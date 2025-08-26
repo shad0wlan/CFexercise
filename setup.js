@@ -64,7 +64,8 @@ if (run('npm install', './frontend')) {
 const envPath = path.join('frontend', '.env.local');
 if (!fs.existsSync(envPath)) {
   const envContent = `API_URL=http://localhost:5213/api
-NEXT_PUBLIC_API_URL=http://localhost:5213/api`;
+NEXT_PUBLIC_API_URL=http://localhost:5213/api
+NEXT_PUBLIC_IMAGE_URL=http://localhost:5213`;
   fs.writeFileSync(envPath, envContent);
   log('.env.local created', 'success');
 }

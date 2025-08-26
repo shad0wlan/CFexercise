@@ -14,6 +14,11 @@ export default function BasicInfoPage() {
         <Text as="h2" className="text-2xl" isTitle>
           {titles.basicInfo}
         </Text>
+        <div className="mt-3">
+          <p className="text-sm text-gray-600">
+            💡 <strong>Για να προσθέσετε νέα επιλογή:</strong> Πληκτρολογήστε απευθείας στο πεδίο επιλογής και πατήστε Enter
+          </p>
+        </div>
       </ContentHeaderWrapper>
       <div className="flex flex-col gap-3 p-10 max-w-[900px] w-full mx-auto">
         <ProductionMaterials />

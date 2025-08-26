@@ -101,6 +101,7 @@ export default function ProductCodeForm({
               <FormSectionContainer className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-7">
                 <FormGroup>
                   <Input
+                    placeholder="180"
                     hasError={errors?.cannonTemp}
                     {...register("cannonTemp")}
                   />
@@ -112,7 +113,7 @@ export default function ProductCodeForm({
                   <Label>Ζώνη 1</Label>
 
                   <Input
-                    placeholder="1"
+                    placeholder="160"
                     hasError={errors?.screwsPerZone?.["1"]}
                     {...register("screwsPerZone.1")}
                   />
@@ -126,7 +127,7 @@ export default function ProductCodeForm({
                   <Label>Ζώνη 2</Label>
 
                   <Input
-                    placeholder="2"
+                    placeholder="170"
                     hasError={errors?.screwsPerZone?.["2"]}
                     {...register("screwsPerZone.2")}
                   />
@@ -140,7 +141,7 @@ export default function ProductCodeForm({
                   <Label>Ζώνη 3</Label>
 
                   <Input
-                    placeholder="3"
+                    placeholder="175"
                     hasError={errors?.screwsPerZone?.["3"]}
                     {...register("screwsPerZone.3")}
                   />
@@ -154,7 +155,7 @@ export default function ProductCodeForm({
                   <Label>Ζώνη 4</Label>
 
                   <Input
-                    placeholder="4"
+                    placeholder="180"
                     hasError={errors?.screwsPerZone?.["4"]}
                     {...register("screwsPerZone.4")}
                   />
@@ -168,7 +169,7 @@ export default function ProductCodeForm({
                   <Label>Ζώνη 5</Label>
 
                   <Input
-                    placeholder="5"
+                    placeholder="185"
                     hasError={errors?.screwsPerZone?.["5"]}
                     {...register("screwsPerZone.5")}
                   />
@@ -182,7 +183,7 @@ export default function ProductCodeForm({
                   <Label>Ζώνη 6</Label>
 
                   <Input
-                    placeholder="6"
+                    placeholder="190"
                     hasError={errors?.screwsPerZone?.["6"]}
                     {...register("screwsPerZone.6")}
                   />
@@ -201,7 +202,7 @@ export default function ProductCodeForm({
                   <Label>Πάνω</Label>
 
                   <Input
-                    placeholder="Πάνω"
+                    placeholder="80"
                     hasError={errors?.kalupiTemp?.up}
                     {...register("kalupiTemp.up")}
                   />
@@ -213,7 +214,7 @@ export default function ProductCodeForm({
                   <Label>Κάτω</Label>
 
                   <Input
-                    placeholder="Κάτω"
+                    placeholder="85"
                     hasError={errors?.kalupiTemp?.down}
                     {...register("kalupiTemp.down")}
                   />
@@ -225,7 +226,7 @@ export default function ProductCodeForm({
                   <Label>Δεξιά</Label>
 
                   <Input
-                    placeholder="Δεξιά"
+                    placeholder="75"
                     hasError={errors?.kalupiTemp?.right}
                     {...register("kalupiTemp.right")}
                   />
@@ -239,7 +240,7 @@ export default function ProductCodeForm({
                   <Label>Αριστερά</Label>
 
                   <Input
-                    placeholder="Αριστερά"
+                    placeholder="75"
                     hasError={errors?.kalupiTemp?.left}
                     {...register("kalupiTemp.left")}
                   />
@@ -251,7 +252,7 @@ export default function ProductCodeForm({
                   <Label>Μπρ. Πάνω</Label>
 
                   <Input
-                    placeholder="Μπρ. Πάνω"
+                    placeholder="90"
                     hasError={errors?.kalupiTemp?.frontUp}
                     {...register("kalupiTemp.frontUp")}
                   />
@@ -265,7 +266,7 @@ export default function ProductCodeForm({
                   <Label>Μπρ. Κάτω</Label>
 
                   <Input
-                    placeholder="Μπρ. Κάτω"
+                    placeholder="95"
                     hasError={errors?.kalupiTemp?.frontDown}
                     {...register("kalupiTemp.frontDown")}
                   />
@@ -279,7 +280,7 @@ export default function ProductCodeForm({
               <FormGroup className="lg:w-1/2">
                 <Label>Τραβηχτικό</Label>
                 <Input
-                  placeholder="Ταχύτητα"
+                  placeholder="25"
                   hasError={errors?.speed}
                   {...register("speed")}
                 />

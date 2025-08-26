@@ -102,6 +102,7 @@ export default function EntryFormMainInputs({
         <FormGroup>
           <Label>Βαρος/μ.</Label>
           <Input
+            placeholder="π.χ. 2.5"
             hasError={errors?.weightPerMeter}
             {...register("weightPerMeter")}
             disabled={isCompleted}
@@ -113,6 +114,7 @@ export default function EntryFormMainInputs({
         <FormGroup>
           <Label>Βαρος Σύνολο</Label>
           <Input
+            placeholder="π.χ. 150.5"
             hasError={errors?.weightTotal}
             {...register("weightTotal")}
             disabled={isCompleted}
@@ -124,6 +126,7 @@ export default function EntryFormMainInputs({
         <FormGroup>
           <Label>Παραγωγή για stock</Label>
           <Input
+            placeholder="π.χ. 50"
             hasError={errors?.productionForStock}
             {...register("productionForStock")}
             disabled={isCompleted}

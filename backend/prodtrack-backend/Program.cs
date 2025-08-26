@@ -50,6 +50,19 @@ builder.Services.AddSwaggerGen(option =>
         }
     });
 });
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll", policy =>
+    {
+        if (builder.Environment.IsDevelopment())
+        {
+            policy.AllowAnyOrigin()
+                  .AllowAnyHeader()
+                  .AllowAnyMethod();
+        }
+    });
+});
+
 builder.Services.AddControllers();
 builder.Services.AddControllers().AddNewtonsoftJson(options =>
 {
@@ -137,6 +150,12 @@ app.UseStaticFiles(new StaticFileOptions
 });
 
 app.UseHttpsRedirection();
+
+if (app.Environment.IsDevelopment())
+{
+    app.UseCors("AllowAll");
+}
+
 app.UseAuthentication();
 app.UseAuthorization();
 app.MapControllers();
@@ -146,6 +165,7 @@ using (var scope = app.Services.CreateScope())
     var services = scope.ServiceProvider;
     await RolesUtils.SeedRolesAsync(services);
     await RolesUtils.SeedDefaultAdminAsync(services);
+    await RolesUtils.SeedDefaultUsersAsync(services);
 }
 
 app.Run();

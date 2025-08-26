@@ -111,7 +111,7 @@ export default function ReactSelect({
 
   return (
     <div className="w-full flex flex-col sm:flex-row sm:items-center gap-3">
-      <CreatableSelect
+        <CreatableSelect
         ref={selectRef}
         isClearable
         isLoading={onCreatePending}
