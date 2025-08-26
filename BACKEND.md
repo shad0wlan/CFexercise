@@ -3,7 +3,7 @@
 ## Δομή
 
 Το backend είναι χτισμένο με ASP.NET Core 8 και χρησιμοποιεί PostgreSQL για την βάση.
-
+Default login: `admin` / `ProdTrack2025` (Auto-seeded)
 ### Controllers
 
 - `AuthController` - login και JWT tokens
