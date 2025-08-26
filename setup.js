@@ -50,7 +50,7 @@ if (!hasDocker) {
 
 // backend setup
 log('\nsetting up backend...');
-if (run('dotnet restore', './backend/api-backend')) {
+if (run('dotnet restore', './backend/prodtrack-backend')) {
   log('backend packages installed', 'success');
 }
 
@@ -73,7 +73,7 @@ log('\nsetup done', 'success');
 log('\nnext steps:');
 if (hasDocker) {
   log('1. start database (Docker must be running - Desktop on Win/Mac):');
-  log('   cd backend/api-backend');
+  log('   cd backend/prodtrack-backend');
   log('   docker-compose -f docker-compose.dev.yml up -d');
   log('2. run migrations:');
   log('   dotnet ef database update');
@@ -82,7 +82,7 @@ if (hasDocker) {
 } else {
   log('1. install PostgreSQL and create database "prodtrack"');
   log('2. run migrations:');
-  log('   cd backend/api-backend');
+  log('   cd backend/prodtrack-backend');
   log('   dotnet ef database update');
   log('3. start backend:');
   log('   dotnet run');
