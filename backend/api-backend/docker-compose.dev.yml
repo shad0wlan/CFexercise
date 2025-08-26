@@ -1,9 +1,9 @@
-﻿services:
-  plastiki.database:
+services:
+  prodtrack.database:
     image: postgres:latest
-    container_name: plastiki.database
+    container_name: prodtrack.database
     environment:
-      - POSTGRES_DB=plastiki
+      - POSTGRES_DB=prodtrack
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
     ports:

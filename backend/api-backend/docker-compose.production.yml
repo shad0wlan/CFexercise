@@ -1,16 +1,15 @@
-﻿version: '3.8'
+version: '3.8'
 services:
-  plastiki:
-    image: ghcr.io/glomvardos/plastiki-backend:latest
-    restart: always
+  prodtrack:
     build:
       context: .
-      dockerfile: Plastiki/Dockerfile
+      dockerfile: Dockerfile
+    restart: always
     environment:
       - ASPNETCORE_ENVIRONMENT=Production
       - HOST=db
       - PORT=5432
-      - DATABASE=plastiki-db
+      - DATABASE=prodtrack-db
       - USERNAME=postgres
       - PASSWORD=WDipCMvTZ46zE575DApj7IEqQuATFymkqz/c5l6RTGM=
       - UPLOAD_PATH=/app/Uploads
@@ -25,7 +24,7 @@ services:
     image: postgres:latest
     restart: always
     environment:
-      POSTGRES_DB: plastiki-db
+      POSTGRES_DB: prodtrack-db
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: WDipCMvTZ46zE575DApj7IEqQuATFymkqz/c5l6RTGM=
     volumes:
