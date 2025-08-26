@@ -1,7 +1,7 @@
 services:
-  prodtrack.database:
+  prodtrack-db:
     image: postgres:latest
-    container_name: prodtrack.database
+    container_name: prodtrack-db
     environment:
       - POSTGRES_DB=prodtrack
       - POSTGRES_USER=postgres

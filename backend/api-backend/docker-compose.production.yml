@@ -1,13 +1,13 @@
 version: '3.8'
 services:
-  prodtrack:
+  prodtrack-api:
     build:
       context: .
       dockerfile: Dockerfile
     restart: always
     environment:
       - ASPNETCORE_ENVIRONMENT=Production
-      - HOST=db
+      - HOST=prodtrack-db
       - PORT=5432
       - DATABASE=prodtrack-db
       - USERNAME=postgres
@@ -17,10 +17,10 @@ services:
       - "8080:8080"
       - "8081:8081"
     depends_on:
-      - db
+      - prodtrack-db
     volumes:
       - uploads-data:/app/Uploads
-  db:
+  prodtrack-db:
     image: postgres:latest
     restart: always
     environment:
@@ -28,8 +28,8 @@ services:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: WDipCMvTZ46zE575DApj7IEqQuATFymkqz/c5l6RTGM=
     volumes:
-      - db-data:/var/lib/postgresql/data
+      - prodtrack-db-data:/var/lib/postgresql/data
 volumes:
-  db-data:
+  prodtrack-db-data:
   uploads-data:
 
