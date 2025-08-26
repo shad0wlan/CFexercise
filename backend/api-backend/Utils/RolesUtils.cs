@@ -32,12 +32,12 @@ public static class RolesUtils
             adminUser = new User
             {
                 UserName = "admin",
-                Email = "info@plastiki.com.gr",
-                FirstName = "Plastiki",
+                Email = "admin@prodtrack.com",
+                FirstName = "ProdTrack",
                 LastName = "Admin",
             };
 
-            var result = await userManager.CreateAsync(adminUser, "PlastikiApp2025");
+            var result = await userManager.CreateAsync(adminUser, "ProdTrack2025");
 
             if (result.Succeeded)
             {

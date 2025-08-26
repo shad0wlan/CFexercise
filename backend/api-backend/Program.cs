@@ -135,10 +135,7 @@ using (var scope = app.Services.CreateScope())
 {
     var services = scope.ServiceProvider;
     await RolesUtils.SeedRolesAsync(services);
-    if (app.Environment.IsProduction())
-    {
-        await RolesUtils.SeedDefaultAdminAsync(services);
-    }
+    await RolesUtils.SeedDefaultAdminAsync(services);
 }
 
 app.Run();
