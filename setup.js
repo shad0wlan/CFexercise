@@ -72,7 +72,7 @@ NEXT_PUBLIC_API_URL=http://localhost:5213/api`;
 log('\nsetup done', 'success');
 log('\nnext steps:');
 if (hasDocker) {
-  log('1. start database (Docker Desktop must be running!):');
+  log('1. start database (Docker must be running - Desktop on Win/Mac):');
   log('   cd backend/api-backend');
   log('   docker-compose -f docker-compose.dev.yml up -d');
   log('2. run migrations:');
