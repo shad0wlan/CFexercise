@@ -303,7 +303,7 @@ docker-compose -f docker-compose.production.yml up -d --build
 ## Δοκιμή
 
 1. Backend: http://localhost:5213/swagger (dev) ή http://localhost:8080/swagger (production)
-2. Frontend: http://localhost:3000
+2. Frontend: http://localhost:3000 ή όποιο port σας έδωσε
 3. Default logins (Auto-seeded):
    - Admin: `admin` / `ProdTrack2025`
    - Operator: `operator` / `Operator2025`
